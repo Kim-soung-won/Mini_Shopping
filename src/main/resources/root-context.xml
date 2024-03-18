@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+           http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc.xsd
+           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+
+
+
+    <context:component-scan base-package="com.i.minishopping"/>
+    <context:component-scan base-package="com.i.minishopping.conf" />
+
+<!--&lt;!&ndash;    <tx:annotation-driven transaction-manager="transactionManager" />&ndash;&gt;-->
+    <context:component-scan base-package="com.i.minishopping.brand.bean" />
+    <context:component-scan base-package="com.i.minishopping.brand.dao" />
+    <context:component-scan base-package="com.i.minishopping.brand.service" />
+
+    <context:component-scan base-package="com.i.minishopping.user.bean" />
+    <context:component-scan base-package="com.i.minishopping.user.dao" />
+    <context:component-scan base-package="com.i.minishopping.user.service" />
+
+    <context:component-scan base-package="com.i.minishopping.product.bean" />
+    <context:component-scan base-package="com.i.minishopping.product.dao" />
+    <context:component-scan base-package="com.i.minishopping.product.service" />
+
+
+
+    <!--<bean id="helloSpring" class="com.i.minishopping.Main-->
+<!--    <bean id="userInsertService" class="com.i.minishopping.user.service.UserInsertService">-->
+<!--        <property name="userDTO" ref="userDTO" />-->
+<!--    </bean>-->
+    <!--
+    <bean id="userSelectService" class="com.i.minishopping.user.service.UserSelectService">
+        <property name="userDAO" ref="userDAOImpl" />
+    </bean>
+    <bean id="userUpdateService" class="com.i.minishopping.user.service.UserUpdateService"/>
+    <bean id="userDeleteService" class="com.i.minishopping.user.service.UserDeleteService"/>
+-->
+
+<!--    <bean id="userDTO" class="com.i.minishopping.user.bean.UserDTO" scope="prototype"/>-->
+
+    <!--
+    <bean id="userDAOImpl" class="com.i.minishopping.user.dao.UserDAOImpl">
+
+    </bean>-->
+</beans>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="brandSQL">
+
+    <insert id="writeBrand" parameterType="brand">
+        insert into brands values(#{brandId}, #{brandName}, now())
+    </insert>
+
+    <select id="getBrandList" resultType="brand">
+        select * from brands
+    </select>
+
+    <update id="updateBrand" parameterType="brand">
+        update brands set brand_name=#{brandName}, now() where brand_id=#{brandId}
+    </update>
+
+    <delete id="deleteBrand" parameterType="brand">
+        delete from brands where brand_id=#{brandId}
+    </delete>
+
+    <select id="checkBrandId" parameterType="Long" resultType="brand">
+        select * from brands where brand_id=#{brandId}
+    </select>
+</mapper>
+

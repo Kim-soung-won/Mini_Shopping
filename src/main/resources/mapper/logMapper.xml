@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="logSQL">
+
+    <insert id="writeLog" parameterType="log">
+        insert into product_log values(#{productId}
+        , #{size}
+        , #{count}
+        , #{createdWho}
+        , now())
+    </insert>
+
+    <select id="getLogList" resultType="log">
+        select * from product_log
+    </select>
+
+    <update id="updateLog" parameterType="log">
+        update product_log set size=#{size}
+        , count=#{count}
+        , created_who=#{createdWho}
+        where product_id=#{productId}
+    </update>
+
+    <delete id="deleteLog" parameterType="log">
+        delete FROM product_log WHERE product_id=#{productId}
+    </delete>
+</mapper>

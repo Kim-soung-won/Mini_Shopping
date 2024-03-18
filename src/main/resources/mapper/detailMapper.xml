@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="detailSQL">
+
+    <insert id="writeDetail" parameterType="detail">
+        insert into product_detail values(#{productId}
+        , #{size}
+        , #{pdBeforeCount}
+        , #{pdSellCount})
+    </insert>
+
+    <select id="getDetailList" resultType="detail">
+        select * from product_detail
+    </select>
+
+    <update id="updateDetail" parameterType="detail">
+        update product_detail set size=#{size}
+        , pd_before_count=#{pdBeforeCount}
+        , pd_category=#{pdCategory}
+        where product_id=#{productId}
+    </update>
+
+    <delete id="deleteDetail" parameterType="detail">
+        delete FROM product_detail WHERE product_id=#{productId}
+    </delete>
+
+    <select id="checkSize" parameterType="String" resultType="detail">
+        select * from product_detail where size=#{size}
+    </select>
+</mapper>

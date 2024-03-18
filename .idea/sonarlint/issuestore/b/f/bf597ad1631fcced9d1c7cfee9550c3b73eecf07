@@ -1,0 +1,10 @@
+
+£
+java:S1186&"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(”Ïÿ–ýÿÿÿÿ8ßžÔ¶ã1
+ž
+java:S1186+"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(­—ëà8ßžÔ¶ã1
+_
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ8ßžÔ¶ã1
+s
+java:S2159"VRemove this call to "equals"; comparisons between unrelated types always return false.(…Ã†“8äžÔ¶ã1
+]	java:S1251"<This block of commented-out lines of code should be removed.(”Ïÿ–ýÿÿÿÿ8æžÔ¶ã1

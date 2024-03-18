@@ -1,0 +1,8 @@
+
+s	java:S116"RRename this field "user_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¿€¥·úÿÿÿÿ8¶Ÿû¶ã1
+v	java:S116"URename this field "user_email" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Òµ¬øÿÿÿÿ8Éˆü¶ã1
+t	java:S116"XRename this field "user_password" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Åñ­8úäü¶ã1
+p	java:S116"TRename this field "user_role" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°°×¯8Ó£ı¶ã1
+u	java:S116"TRename this field "user_pnum" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ó¯åøÿÿÿÿ8‚Üı¶ã1
+`
+java:S1128"CRemove this unused import 'org.springframework.stereotype.Service'.(¼º¡Ú8Óöı¶ã1
