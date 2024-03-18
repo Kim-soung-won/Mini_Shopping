@@ -41,3 +41,7 @@ t
 Dsrc/main/java/com/i/minishopping/user/service/UserInsertService.java,b\d\bd544ad89a3fb08b6468f464eaae1e695ff5790b
 u
 Esrc/main/java/com/i/minishopping/product/bean/product/ProductDTO.java,0\7\07f34f2af114398fbca6434e4f8a7763e9c6527e
+t
+Dsrc/main/java/com/i/minishopping/user/service/UserDeleteService.java,8\4\847db2667f8497353a44a73252e9368ae60b046d
+z
+Jsrc/main/java/com/i/minishopping/user/service/UserRegistrationService.java,c\c\cc702e04b55f6513cbb8c58f1356fb90b7d28371

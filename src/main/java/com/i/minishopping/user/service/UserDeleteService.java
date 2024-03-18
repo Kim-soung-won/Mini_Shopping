@@ -1,48 +1,34 @@
 package com.i.minishopping.user.service;
 
+
+import com.i.minishopping.user.dao.UserDAO;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-//@Setter
+import java.util.Scanner;
+
 @Service
-public class UserDeleteService implements UserService{
-    @Override
-    public void execute() {
-
-    }
-
-   /* @Autowired
+public class UserDeleteService implements UserService {
+    @Autowired
     private UserDAO userDAO;
 
+
+
     @Override
     public void execute() {
+        Scanner scan = new Scanner(System.in);
 
-        Scanner sc = new Scanner(System.in);
+        System.out.print("삭제할 Id 입력 : ");
+        Long userId = scan.nextLong();
 
-        System.out.print("삭제할 아이디 입력 : ");
-        String id = sc.next();
 
-        List<UserDTO> list = userDAO.getUserList();
 
-        int sw = 0;
-        for(UserDTO userDTO : list) {
 
-            if(userDTO.getUserId().equals(id)) {
-
-                sw = 1;
-                userDAO.deleteUser(userDAO);
-                list.remove(userDTO);
-
-                System.out.println("삭제를 완료했습니다.");
-                break;
-
-            } // if
-
-        } // enhanced for
-
-        if(sw == 0) {
+        if (userDAO.getUserById(userId) != null) {
+            userDAO.deleteUser(userId);
+            System.out.println("삭제를 완료했습니다.");
+        } else {
             System.out.println("아이디가 존재하지 않습니다.");
-        } // if
-
-    } // execute
-*/
-} // end class
+        }
+    }
+}
