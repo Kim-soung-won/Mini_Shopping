@@ -2,27 +2,47 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
-
 <mapper namespace="userSQL">
 
-    <insert id="write" parameterType="user">
-        insert into user values(#{userId}, #{userEmail}, #{userPassword},#{userRole},#{userPnum})
+    <insert id="writeUser" parameterType="com.i.minishopping.user.bean.UserDTO">
+        INSERT INTO user (user_id, user_email, user_password, user_role, user_pnum)
+        VALUES (#{userId}, #{userEmail}, #{userPassword}, #{userRole}, #{userPnum})
     </insert>
 
-    <select id="getUserList" resultType="user">
-        select * from user
+    <select id="getUserList" resultType="com.i.minishopping.user.bean.UserDTO">
+        SELECT * FROM user
     </select>
 
-    <update id="updateUser" parameterType="user">
-        update user set name=#{name}, pwd=#{pwd} where id=#{id}
+    <select id="getUserById" parameterType="long" resultType="com.i.minishopping.user.bean.UserDTO">
+        SELECT * FROM user WHERE user_id = #{userId}
+    </select>
+
+    <!-- 수정된 부분: 테이블 이름을 'user'로 통일하고, 컬럼 이름을 'user_email'로 수정 -->
+    <select id="getUserByEmail" parameterType="string" resultType="com.i.minishopping.user.bean.UserDTO">
+        SELECT * FROM user WHERE user_email = #{userEmail}
+    </select>
+
+    <update id="updateUser" parameterType="com.i.minishopping.user.bean.UserDTO">
+        UPDATE user SET user_email = #{userEmail}, user_password = #{userPassword},
+        user_role = #{userRole}, user_pnum = #{userPnum}
+        WHERE user_id = #{userId}
     </update>
 
-    <delete id="deleteUser" parameterType="user">
-        delete FROM user WHERE user_id=#{userId}
+    <delete id="deleteUser" parameterType="long">
+        DELETE FROM user WHERE user_id = #{userId}
     </delete>
 
+    <!-- 수정된 부분: 컬럼 이름을 'user_email'과 'user_password'로 정확하게 수정 -->
+    <!--  <select id="login" parameterType="map" resultType="com.i.minishopping.user.bean.UserDTO">
+          SELECT *
+          FROM user
+          WHERE user_email = #{userEmail} AND user_password = #{userPassword}
+      </select>-->
+    <select id="getUserByEmailAndPassword" resultType="com.i.minishopping.user.bean.UserDTO">
+        SELECT * FROM user WHERE user_email = #{userEmail} AND user_password = #{userPassword}
+    </select>
     <select id="checkCreatedWho" parameterType="Long" resultType="user">
         select * from user where user_id=#{createdWho}
     </select>
-</mapper>
 
+</mapper>
