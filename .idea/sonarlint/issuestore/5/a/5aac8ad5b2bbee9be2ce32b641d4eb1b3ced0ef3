@@ -14,12 +14,12 @@ java:S11923"JDefine a constant instead of duplicating this literal "4. μ‚­μ " 
 s	java:S135 "YReduce the total number of break and continue statements in this loop to use at most one.(οÿÿÿÿÿ
 n
 java:S2259‘"KA "NullPointerException" could be thrown; "detailService" is nullable here.(ά„ήϊÿÿÿÿ8ΰρ±ÿδ1
+i
+java:S2259w"LA "NullPointerException" could be thrown; "productService" is nullable here.(Υ¦ι‘8αρ±ÿδ1
 k
 java:S2259ª"HA "NullPointerException" could be thrown; "logService" is nullable here.(‚Ò€όÿÿÿÿ8αρ±ÿδ1
 l
 java:S2259^"JA "NullPointerException" could be thrown; "brandService" is nullable here.(Κ‡Κ΅ώÿÿÿÿ8αρ±ÿδ1
-i
-java:S2259w"LA "NullPointerException" could be thrown; "productService" is nullable here.(Υ¦ι‘8αρ±ÿδ1
 m
 java:S3776"RRefactor this method to reduce its Cognitive Complexity from 55 to the 15 allowed.(¤—―ψÿÿÿÿ
 2
