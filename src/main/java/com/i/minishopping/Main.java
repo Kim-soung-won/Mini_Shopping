@@ -15,7 +15,7 @@ import com.i.minishopping.user.service.UserService;
 import java.util.Scanner;
 
 
-
+/*수정함*/
 @Configuration
 @ComponentScan(basePackages = "com.i.minishopping")
 public class Main {
