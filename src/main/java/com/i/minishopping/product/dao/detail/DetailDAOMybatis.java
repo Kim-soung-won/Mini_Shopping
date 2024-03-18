@@ -36,6 +36,6 @@ public class DetailDAOMybatis implements DetailDAO {
 
     @Override
     public DetailDTO checkSize(String size) {
-        return sqlSession.selectOne("detailSQL,checkSize", size);
+        return sqlSession.selectOne("detailSQL.checkSize", size);
     }
 }

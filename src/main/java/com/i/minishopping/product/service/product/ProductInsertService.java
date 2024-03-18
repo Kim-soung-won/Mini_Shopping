@@ -30,25 +30,22 @@ public class ProductInsertService implements ProductService {
         Long brandId = sc.nextLong();
         BrandDTO brandDTO = brandDAO.checkBrandId(brandId);
 
-        System.out.println();
         if(brandDTO == null) {
+            System.out.println();
             System.out.println("찾고자 하는 브랜드가 없습니다.");
             return;
         }
-
-
         System.out.print("카테고리 입력 : ");
         String pdCategory = sc.next();
         System.out.print("등록자 입력 : ");
         Long createdWho = sc.nextLong();
         UserDTO userDTO = userDAO.checkCreatedWho(createdWho);
 
-        System.out.println();
         if(userDTO == null) {
+            System.out.println();
             System.out.println("찾고자 하는 등록자가 없습니다.");
             return;
         }
-
 
         productDTO.setPdName(pdName);
         productDTO.setPdPrice(pdPrice);
