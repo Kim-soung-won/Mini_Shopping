@@ -39,7 +39,7 @@ public class ProductInsertService implements ProductService {
 
         System.out.print("카테고리 입력 : ");
         String pdCategory = sc.next();
-        System.out.print("등록자 : 입력");
+        System.out.print("등록자 입력 : ");
         Long createdWho = sc.nextLong();
         UserDTO userDTO = userDAO.checkCreatedWho(createdWho);
 
