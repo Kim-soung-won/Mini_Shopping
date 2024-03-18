@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="userDetailSQL">
+
+
+    <insert id="writeUserDetail" parameterType="com.i.minishopping.user.bean.UserDetailDTO">
+        INSERT INTO user_detail (user_id, name, height, weight, sex) VALUES (#{userId}, #{name}, #{height}, #{weight}, #{sex});
+    </insert>
+
+    <update id="updateUserDetail" parameterType="com.i.minishopping.user.bean.UserDetailDTO">
+        UPDATE user_detail SET name = #{name}, height = #{height}, weight = #{weight}, sex = #{sex} WHERE user_id = #{userId};
+    </update>
+
+    <select id="getUserDetailList" resultType="com.i.minishopping.user.bean.UserDetailDTO">
+        SELECT * FROM user_detail
+    </select>
+
+    <delete id="deleteUserDetail" parameterType="long" >
+        delete FROM user_detail WHERE user_id = #{userId}
+    </delete>
+
+    <select id="getUserById" parameterType="long" resultType="com.i.minishopping.user.bean.UserDetailDTO">
+        SELECT * FROM user_detail WHERE user_id = #{userId}
+    </select>
+
+</mapper>
