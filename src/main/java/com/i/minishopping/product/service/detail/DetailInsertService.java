@@ -23,8 +23,9 @@ public class DetailInsertService implements DetailService {
         System.out.println();
         System.out.print("일련번호 입력 : ");
         Long productId = sc.nextLong();
-        ProductDTO productDTO = productDAO.checkProdutId(productId);
+        ProductDTO productDTO = productDAO.checkProductId(productId);
         if(productDTO == null) {
+            System.out.println();
             System.out.println("찾고자 하는 일련번호가 없습니다.");
             return;
         }

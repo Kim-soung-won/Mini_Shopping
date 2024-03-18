@@ -10,10 +10,10 @@
 
     <typeAliases>
         <typeAlias type="com.i.minishopping.user.bean.UserDTO" alias="user" />
-        <typeAlias type="com.i.minishopping.product.bean.ProductDTO" alias="product" />
-        <typeAlias type="com.i.minishopping.user.bean.UserDetailDTO" alias="userDetail"/>
-                <typeAlias type="product.bean.ProductDetailDTO" alias="pdDetail"/>
-                <typeAlias type="product.bean.ProductDetailDTO" alias="pdLog"/>
+        <typeAlias type="com.i.minishopping.product.bean.product.ProductDTO" alias="product" />
+        <typeAlias type="com.i.minishopping.product.bean.detail.DetailDTO" alias="detail"/>
+        <typeAlias type="com.i.minishopping.product.bean.log.LogDTO" alias="log"/>
+        <typeAlias type="com.i.minishopping.brand.bean.BrandDTO" alias="brand"/>
     </typeAliases>
 
 </configuration>

@@ -1,32 +1,28 @@
 
-`
-java:S11921"JDefine a constant instead of duplicating this literal "2. μ¶λ ¥" 5 times.(›–ς
-`
-java:S11920"JDefine a constant instead of duplicating this literal "1. μ…λ ¥" 5 times.(³ΐΊΆ
-`
-java:S1192M"JDefine a constant instead of duplicating this literal "5. μΆ…λ£" 4 times.(θΰ—
-e
-java:S11922"JDefine a constant instead of duplicating this literal "3. μμ •" 5 times.(—ήάψώÿÿÿÿ
 g
-java:S1192("QDefine a constant instead of duplicating this literal "λ²νΈ μ…λ ¥ : " 6 times.(αΨΕƒ
-`
-java:S11923"JDefine a constant instead of duplicating this literal "4. μ‚­μ " 5 times.(ά°β΄
-s	java:S135 "YReduce the total number of break and continue statements in this loop to use at most one.(οÿÿÿÿÿ
-n
-java:S2259‘"KA "NullPointerException" could be thrown; "detailService" is nullable here.(ά„ήϊÿÿÿÿ8ΰρ±ÿδ1
-i
-java:S2259w"LA "NullPointerException" could be thrown; "productService" is nullable here.(Υ¦ι‘8αρ±ÿδ1
-k
-java:S2259ª"HA "NullPointerException" could be thrown; "logService" is nullable here.(‚Ò€όÿÿÿÿ8αρ±ÿδ1
+java:S11920"JDefine a constant instead of duplicating this literal "2. μ¶λ ¥" 5 times.(›–ς8Ύήρ€ε1
+g
+java:S1192/"JDefine a constant instead of duplicating this literal "1. μ…λ ¥" 5 times.(³ΐΊΆ8Ώήρ€ε1
+g
+java:S1192L"JDefine a constant instead of duplicating this literal "5. μΆ…λ£" 4 times.(θΰ—8ΐήρ€ε1
 l
-java:S2259^"JA "NullPointerException" could be thrown; "brandService" is nullable here.(Κ‡Κ΅ώÿÿÿÿ8αρ±ÿδ1
-m
-java:S3776"RRefactor this method to reduce its Cognitive Complexity from 55 to the 15 allowed.(¤—―ψÿÿÿÿ
-2
-java:S3626®"Remove this redundant jump.(Ι©ƒ
-y
-java:S1128"\Remove this unused import 'com.i.minishopping.product.service.product.ProductSelectService'.(ρΠΉ€8‘ς±ÿδ1
-u
-java:S1128"SRemove this unused import 'org.springframework.beans.factory.annotation.Autowired'.(΅ΈΞωÿÿÿÿ8‘ς±ÿδ1
-α
-java:S6541"ΕA "Brain Method" was detected. Refactor it to reduce at least one of the following metrics: LOC from 130 to 64, Complexity from 33 to 14, Nesting Level from 3 to 2, Number of Variables from 8 to 6.(¤—―ψÿÿÿÿ
+java:S11921"JDefine a constant instead of duplicating this literal "3. μμ •" 5 times.(—ήάψώÿÿÿÿ8ΐήρ€ε1
+n
+java:S1192("QDefine a constant instead of duplicating this literal "λ²νΈ μ…λ ¥ : " 6 times.(αΨΕƒ8ΐήρ€ε1
+g
+java:S11922"JDefine a constant instead of duplicating this literal "4. μ‚­μ " 5 times.(ά°β΄8Αήρ€ε1
+z	java:S135 "YReduce the total number of break and continue statements in this loop to use at most one.(οÿÿÿÿÿ8Βήρ€ε1
+l
+java:S2259]"JA "NullPointerException" could be thrown; "brandService" is nullable here.(Κ‡Κ΅ώÿÿÿÿ8οαρ€ε1
+i
+java:S2259v"LA "NullPointerException" could be thrown; "productService" is nullable here.(Υ¦ι‘8οαρ€ε1
+k
+java:S2259©"HA "NullPointerException" could be thrown; "logService" is nullable here.(‚Ò€όÿÿÿÿ8οαρ€ε1
+n
+java:S2259"KA "NullPointerException" could be thrown; "detailService" is nullable here.(ά„ήϊÿÿÿÿ8οαρ€ε1
+t
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 55 to the 15 allowed.(¤—―ψÿÿÿÿ8ταρ€ε1
+9
+java:S3626­"Remove this redundant jump.(Ι©ƒ8υαρ€ε1
+θ
+java:S6541"ΕA "Brain Method" was detected. Refactor it to reduce at least one of the following metrics: LOC from 130 to 64, Complexity from 33 to 14, Nesting Level from 3 to 2, Number of Variables from 8 to 6.(¤—―ψÿÿÿÿ8„βρ€ε1
