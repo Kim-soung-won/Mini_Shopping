@@ -20,7 +20,7 @@ public class UserSelectService implements UserService {
 
         List<UserDTO> list = userDAO.getUserList();
 
-        System.out.println("이메일\tID\t비밀번호\t전화번호");
+        System.out.println("ID\t이메일\t비밀번호\t전화번호");
         for(UserDTO userDTO : list) {
             if(userDTO != null) { // null 체크 추가
                 System.out.println(userDTO); // toString()은 생략 가능합니다.

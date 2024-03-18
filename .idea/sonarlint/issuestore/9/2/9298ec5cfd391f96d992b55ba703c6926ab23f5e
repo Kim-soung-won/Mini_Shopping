@@ -1,3 +1,7 @@
 
 _
 java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ8À£åÿä1
+c
+java:S1128"ARemove this unused import 'com.i.minishopping.user.bean.UserDTO'.(¦ˆÉïÿÿÿÿÿ8“¾˜…å1
+\
+java:S1128"@Remove this unused import 'com.i.minishopping.user.dao.UserDAO'.(ØÑÁ58“¾˜…å1

@@ -33,11 +33,7 @@
     </delete>
 
     <!-- 수정된 부분: 컬럼 이름을 'user_email'과 'user_password'로 정확하게 수정 -->
-    <!--  <select id="login" parameterType="map" resultType="com.i.minishopping.user.bean.UserDTO">
-          SELECT *
-          FROM user
-          WHERE user_email = #{userEmail} AND user_password = #{userPassword}
-      </select>-->
+
     <select id="getUserByEmailAndPassword" resultType="com.i.minishopping.user.bean.UserDTO">
         SELECT * FROM user WHERE user_email = #{userEmail} AND user_password = #{userPassword}
     </select>

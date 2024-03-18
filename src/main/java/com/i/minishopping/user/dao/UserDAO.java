@@ -19,4 +19,9 @@ public interface UserDAO {
 
     UserDTO checkCreatedWho(Long createdWho);
     UserDTO selectUserByEmailAndPassword(String email, String password);
+
+
+    UserDTO getUserByEmail(String userEmail);
+
+
 }
