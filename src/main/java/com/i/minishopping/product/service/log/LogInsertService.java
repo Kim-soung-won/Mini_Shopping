@@ -15,7 +15,7 @@ import java.util.Scanner;
 
 @Service
 @RequiredArgsConstructor
-public class LogInertService implements LogService {
+public class LogInsertService implements LogService {
     private final DetailDAO detailDAO;
     private final ProductDAO productDAO;
     private final UserDAO userDAO;
@@ -45,7 +45,7 @@ public class LogInertService implements LogService {
 
         System.out.print("수량 : ");
         int count = sc.nextInt();
-        System.out.print("등록자 : 입력");
+        System.out.print("등록자 입력 : ");
         Long createdWho = sc.nextLong();
         UserDTO userDTO = userDAO.checkCreatedWho(createdWho);
 

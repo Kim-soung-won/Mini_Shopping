@@ -14,11 +14,11 @@ public class BrandSelectService implements BrandService {
     @Override
     public void execute() {
         System.out.println();
+
         List<BrandDTO> list = brandDAO.getBrandList();
         System.out.println("브랜드I\t브랜드N\t등록시간");
         for(BrandDTO brandDTO : list) {
-            System.out.println();
-            System.out.print(" " + brandDTO.getBrandId() + "\t\t"
+            System.out.println(" " + brandDTO.getBrandId() + "\t\t"
                                  + brandDTO.getBrandName() + "\t\t"
                                  + brandDTO.getCreatedAt());
         }

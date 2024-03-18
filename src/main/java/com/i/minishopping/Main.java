@@ -3,9 +3,7 @@ package com.i.minishopping;
 import com.i.minishopping.brand.service.BrandService;
 import com.i.minishopping.product.service.detail.DetailService;
 import com.i.minishopping.product.service.log.LogService;
-import com.i.minishopping.product.service.product.ProductSelectService;
 import com.i.minishopping.product.service.product.ProductService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -43,7 +41,6 @@ public class Main {
             if(num == 6) break;
 
             if(num == 1) {
-
                 System.out.println();
                 System.out.println("1. 입력");
                 System.out.println("2. 출력");
@@ -155,7 +152,7 @@ public class Main {
                 num = scan.nextInt();
 
                 if(num==1) {
-                    logService = applicationContext.getBean("logInertService", LogService.class);
+                    logService = applicationContext.getBean("logInsertService", LogService.class);
                 }else if(num==2) {
                     logService = applicationContext.getBean("logSelectService", LogService.class);
                 }
