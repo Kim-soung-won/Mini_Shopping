@@ -16,7 +16,7 @@ public class BrandInsertService implements BrandService {
     public void execute() {
         Scanner sc = new Scanner(System.in);
         System.out.println();
-        S 입력 : ");
+        System.out.print("브랜드I 입력 : ");
         Long brandId = sc.nextLong();
         System.out.print("브랜드N 입력 : ");
         String brandName = sc.next();
