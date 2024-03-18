@@ -1,7 +1,9 @@
 package com.i.minishopping.user.service;
 
 import com.i.minishopping.user.bean.UserDTO;
+import com.i.minishopping.user.bean.UserDetailDTO;
 import com.i.minishopping.user.dao.UserDAO;
+import com.i.minishopping.user.dao.UserDetailDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,43 +12,42 @@ import java.util.List;
 import java.util.Scanner;
 
 @Service
-public class UserUpdateService implements UserService {
+public class UserDetailUpdateService implements UserService {
     @Autowired
-    private UserDAO userDAO;
+    private UserDetailDAO userDetailDAO;
 
     @Override
     public void execute() {
         Scanner scan = new Scanner(System.in);
         System.out.println();
 
-        List<UserDTO> list = userDAO.getUserList();
+        List<UserDetailDTO> list = userDetailDAO.getUserDetailList();
 
         try {
             System.out.print("수정할 일련번호 입력 : ");
             Long inputUserId = scan.nextLong(); // 변수명 변경 및 예외 처리를 위한 try-catch 블록 내 배치
 
             int sw = 0;
-            for (UserDTO userDTO : list) {
+            for (UserDetailDTO userDetailDTO : list) {
 
-                if (userDTO.getUserId() == inputUserId) { // 객체 비교를 위해 == 대신 .equals() 사용
+                if (userDetailDTO.getUserId().equals(inputUserId)) { // 객체 비교를 위한 .equals() 사용
 
-                    System.out.println(userDTO);
+                    System.out.println(userDetailDTO);
                     System.out.println();
 
-                    System.out.print("수정할 Email 입력 : ");
-                    String userEmail = scan.next();
-                    System.out.print("수정할 비밀번호 입력 : ");
-                    String userPassword = scan.next();
-                    System.out.print("수정할 폰번호 입력 : ");
-                    String userPnum = scan.next(); // 변수명 Pnum에서 userPnum으로 변경
+                    System.out.print("수정할 이름 입력 : ");
+                    String name = scan.next(); // 변수명 첫 글자는 소문자로
+                    System.out.print("수정할 키 입력 : ");
+                    byte height = scan.nextByte(); // byte 타입 변수명 첫 글자는 소문자로
+                    System.out.print("수정할 몸무게 입력 : ");
+                    byte weight = scan.nextByte(); // byte 타입 변수명 첫 글자는 소문자로
 
-                    // 올바른 값으로 업데이트
-                    userDTO.setUserId(inputUserId);
-                    userDTO.setUserEmail(userEmail);
-                    userDTO.setUserPassword(userPassword);
-                    userDTO.setUserPnum(userPnum);
+                    // 입력 받은 값으로 업데이트
+                    userDetailDTO.setName(name);
+                    userDetailDTO.setHeight(height);
+                    userDetailDTO.setWeight(weight);
 
-                    userDAO.updateUser(userDTO);
+                    userDetailDAO.updateUserDetail(userDetailDTO);
                     sw = 1;
                     System.out.println("수정을 완료했습니다.");
 

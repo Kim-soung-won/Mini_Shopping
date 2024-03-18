@@ -7,7 +7,9 @@ import org.springframework.stereotype.Repository;
 import com.i.minishopping.user.bean.UserDTO;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Repository
 @RequiredArgsConstructor
@@ -25,23 +27,32 @@ public class UserDAOImpl implements UserDAO {
     }
 
     @Override
-    public UserDTO getUserById(String id) {
-        return null; // 주어진 ID와 일치하는 사용자를 찾지 못하면 null 반환
+    public UserDTO getUserById(Long userId) {
+        return sqlSession.selectOne("userSQL.getUserById", userId);
+    }
+    @Override
+    public void updateUser(UserDTO userDTO){
+
+        sqlSession.update("userSQL.updateUser",userDTO);
     }
 
     @Override
-    public void updateUser(UserDTO user) {
-
-    }
-
-    @Override
-    public void deleteUser(String id) {
+    public void deleteUser(Long userId) {
+        sqlSession.delete("userSQL.deleteUser",userId);
 
     }
 
     @Override
     public UserDTO checkCreatedWho(Long createdWho) {
         return sqlSession.selectOne("userSQL.checkCreatedWho", createdWho);
+    }
+    @Override
+    public UserDTO selectUserByEmailAndPassword(String userEmail, String userPassword) {
+        // MyBatis의 parameterType이 Map일 때는, 파라미터를 Map 객체에 담아서 전달합니다.
+        Map<String, Object> params = new HashMap<>();
+        params.put("userEmail", userEmail);
+        params.put("userPassword", userPassword);
+        return sqlSession.selectOne("userSQL.getUserByEmailAndPassword", params);
     }
 
     /*@Override
