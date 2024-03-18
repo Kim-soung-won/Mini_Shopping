@@ -15,10 +15,14 @@ import java.util.Map;
 @RequiredArgsConstructor
 public class UserDAOImpl implements UserDAO {
 
+
     private final SqlSession sqlSession;
+
+
     @Override
-    public void insertUser(UserDTO userDTO) {
-        sqlSession.insert("userSQL.write", userDTO);
+    public void insertUser(UserDTO userDTO)
+    {
+        sqlSession.insert("userSQL.writeUser", userDTO);
     }
 
     @Override
@@ -42,6 +46,7 @@ public class UserDAOImpl implements UserDAO {
 
     }
 
+
     @Override
     public UserDTO checkCreatedWho(Long createdWho) {
         return sqlSession.selectOne("userSQL.checkCreatedWho", createdWho);
@@ -55,19 +60,11 @@ public class UserDAOImpl implements UserDAO {
         return sqlSession.selectOne("userSQL.getUserByEmailAndPassword", params);
     }
 
-    /*@Override
-    public void updateUser(UserDTO com.i.minishopping.user) {
-        Optional<UserDTO> existingUser = userList.stream()
-                .filter(u -> u.getId().equals(com.i.minishopping.user.getId()))
-                .findFirst(); // 업데이트하고자 하는 사용자의 ID와 일치하는 기존 사용자를 찾음
-
-        existingUser.ifPresent(u -> {
-            userList.set(userList.indexOf(u), com.i.minishopping.user); // 기존 사용자 정보를 새 정보로 업데이트
-        });
+    @Override
+    public UserDTO getUserByEmail(String userEmail) {
+        // userEmail 파라미터를 사용하여 데이터베이스에서 사용자를 조회합니다.
+        return sqlSession.selectOne("userSQL.getUserByEmail", userEmail);
     }
 
-    @Override
-    public void deleteUser(String id) {
-        userList.removeIf(com.i.minishopping.user -> com.i.minishopping.user.getId().equals(id)); // 주어진 ID와 일치하는 사용자를 리스트에서 제거
-    }*/
+   
 }
