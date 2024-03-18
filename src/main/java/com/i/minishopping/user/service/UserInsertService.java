@@ -15,7 +15,7 @@ import java.util.Scanner;
 @Service
 @RequiredArgsConstructor
 public class UserInsertService implements UserService {
-     // 정보를 받아온 것 처리
+    // 정보를 받아온 것 처리
     private final UserDAO userDAO;
     private final UserDTO userDTO;
     @Override
