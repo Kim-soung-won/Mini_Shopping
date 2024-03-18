@@ -1,0 +1,32 @@
+
+`
+java:S11921"JDefine a constant instead of duplicating this literal "2. ì¶œë ¥" 5 times.(›–ò
+`
+java:S11920"JDefine a constant instead of duplicating this literal "1. ì…ë ¥" 5 times.(³Àº¢
+`
+java:S1192M"JDefine a constant instead of duplicating this literal "5. ì¢…ë£Œ" 4 times.(èŠà—
+e
+java:S11922"JDefine a constant instead of duplicating this literal "3. ìˆ˜ì •" 5 times.(—ŞÜøşÿÿÿÿ
+g
+java:S1192("QDefine a constant instead of duplicating this literal "ë²ˆí˜¸ ì…ë ¥ : " 6 times.(áØÅƒ
+`
+java:S11923"JDefine a constant instead of duplicating this literal "4. ì‚­ì œ" 5 times.(Ü°â´
+s	java:S135 "YReduce the total number of break and continue statements in this loop to use at most one.(˜ïˆÿÿÿÿÿ
+n
+java:S2259‘"KA "NullPointerException" could be thrown; "detailService" is nullable here.(Ü„ŞŒúÿÿÿÿ8àñ±ÿä1
+k
+java:S2259ª"HA "NullPointerException" could be thrown; "logService" is nullable here.(‚Ò€ˆüÿÿÿÿ8áñ±ÿä1
+l
+java:S2259^"JA "NullPointerException" could be thrown; "brandService" is nullable here.(Ê‡Ê¡şÿÿÿÿ8áñ±ÿä1
+i
+java:S2259w"LA "NullPointerException" could be thrown; "productService" is nullable here.(Õ¦é‘8áñ±ÿä1
+m
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 55 to the 15 allowed.(¤—¯øÿÿÿÿ
+2
+java:S3626®"Remove this redundant jump.(ÉŠ©ƒ
+y
+java:S1128"\Remove this unused import 'com.i.minishopping.product.service.product.ProductSelectService'.(ñĞ¹€8‘ò±ÿä1
+u
+java:S1128"SRemove this unused import 'org.springframework.beans.factory.annotation.Autowired'.(¡¸Îùÿÿÿÿ8‘ò±ÿä1
+á
+java:S6541"ÅA "Brain Method" was detected. Refactor it to reduce at least one of the following metrics: LOC from 130 to 64, Complexity from 33 to 14, Nesting Level from 3 to 2, Number of Variables from 8 to 6.(¤—¯øÿÿÿÿ
