@@ -22,7 +22,7 @@
     </delete>
 
     <select id="checkCreatedWho" parameterType="Long" resultType="user">
-        select * from user user_id=#{createdWho}
+        select * from user where user_id=#{createdWho}
     </select>
 </mapper>
 
