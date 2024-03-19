@@ -12,14 +12,14 @@
         DELETE FROM love WHERE product_id = #{productId} AND created_who = #{userId}
     </delete>
 
-    <select id="selectLovesByUserId" resultType="com.i.minishopping.bean.LoveDTO">
-        SELECT product_id AS productId, created_who AS userId, created_at AS createdAt
-        FROM love WHERE created_who = #{userId}
+    <select id="selectLovesByUserId" resultType="com.i.minishopping.love.bean.LoveDTO">
+        SELECT * FROM love WHERE created_who = #{userId}
     </select>
 
-    <select id="existsLove" resultType="boolean">
+    <select id="existsLove" resultType="int">
         SELECT EXISTS(
         SELECT 1 FROM love WHERE product_id = #{productId} AND created_who = #{userId}
         )
     </select>
+
 </mapper>

@@ -11,5 +11,6 @@ public interface LoveDAO {
     void insertLove(LoveDTO love);
     void deleteLove(Long productId, Long userId);
     List<LoveDTO> selectLovesByUserId(Long userId);
-    boolean existsLove(Long productId, Long userId);
+
+    boolean existsLove(Long productId, Long userId); // 반환 타입 유지
 }

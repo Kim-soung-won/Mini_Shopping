@@ -12,18 +12,18 @@ java:S1192,"QDefine a constant instead of duplicating this literal "ë²ˆí˜¸ ì…ë
 g
 java:S11926"JDefine a constant instead of duplicating this literal "4. ì‚­ì œ" 7 times.(Ü°â´8¯Û¦«å1
 z	java:S135""YReduce the total number of break and continue statements in this loop to use at most one.(˜ïˆÿÿÿÿÿ8¯Û¦«å1
-i
-java:S2259z"LA "NullPointerException" could be thrown; "productService" is nullable here.(Õ¦é‘8Ôİ¦«å1
-l
-java:S2259İ"IA "NullPointerException" could be thrown; "loveService" is nullable here.(¸Ğòşÿÿÿÿ8Ôİ¦«å1
-n
-java:S2259”"KA "NullPointerException" could be thrown; "detailService" is nullable here.(Ü„ŞŒúÿÿÿÿ8Ôİ¦«å1
 k
 java:S2259­"HA "NullPointerException" could be thrown; "logService" is nullable here.(‚Ò€ˆüÿÿÿÿ8Ôİ¦«å1
+i
+java:S2259z"LA "NullPointerException" could be thrown; "productService" is nullable here.(Õ¦é‘8Ôİ¦«å1
 o
 java:S2259Å"LA "NullPointerException" could be thrown; "paymentService" is nullable here.(×Í™²úÿÿÿÿ8Ôİ¦«å1
 l
 java:S2259a"JA "NullPointerException" could be thrown; "brandService" is nullable here.(Ê‡Ê¡şÿÿÿÿ8Ôİ¦«å1
+n
+java:S2259”"KA "NullPointerException" could be thrown; "detailService" is nullable here.(Ü„ŞŒúÿÿÿÿ8Ôİ¦«å1
+l
+java:S2259İ"IA "NullPointerException" could be thrown; "loveService" is nullable here.(¸Ğòşÿÿÿÿ8Ôİ¦«å1
 t
 java:S3776"RRefactor this method to reduce its Cognitive Complexity from 75 to the 15 allowed.(¤—¯øÿÿÿÿ8Øİ¦«å1
 9

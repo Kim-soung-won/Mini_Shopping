@@ -13,8 +13,6 @@ import java.util.Map;
 public class LoveDAOImpl implements LoveDAO {
     private final SqlSession sqlSession;
 
-
-
     @Override
     public void insertLove(LoveDTO loveDTO) {
         sqlSession.insert("loveSQL.insertLove", loveDTO);
@@ -25,7 +23,7 @@ public class LoveDAOImpl implements LoveDAO {
         Map<String, Object> params = new HashMap<>();
         params.put("productId", productId);
         params.put("userId", userId);
-        sqlSession.delete( "loveSQL.deleteLove", params);
+        sqlSession.delete("loveSQL.deleteLove", params);
     }
 
     @Override
@@ -33,12 +31,13 @@ public class LoveDAOImpl implements LoveDAO {
         return sqlSession.selectList("loveSQL.selectLovesByUserId", userId);
     }
 
+
     @Override
     public boolean existsLove(Long productId, Long userId) {
         Map<String, Object> params = new HashMap<>();
         params.put("productId", productId);
         params.put("userId", userId);
         Integer count = sqlSession.selectOne("loveSQL.existsLove", params);
-        return count != null && count > 0;
+        return count != null && count > 0; // Integer 결과를 boolean으로 변환
     }
 }
