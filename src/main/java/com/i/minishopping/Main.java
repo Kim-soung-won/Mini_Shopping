@@ -192,14 +192,11 @@ public class Main {
             if(num==5) break;
 
             paymentService.execute();
-
             } else {
                 System.out.println("1~7번 선택");
                 continue;
             }
-
         } // while
-
     } // menu
 
     public static void main(String[] args) {
