@@ -196,6 +196,7 @@ public class Main {
 
             paymentService.execute();
 
+
             } else if(num == 7) {
                 System.out.println();
                 System.out.println("1. 입력");
@@ -221,11 +222,12 @@ public class Main {
                 loveService.execute();
             }else {
                 System.out.println("1~8번 선택");
+
+
+
                 continue;
             }
-
         } // while
-
     } // menu
 
     public static void main(String[] args) {
