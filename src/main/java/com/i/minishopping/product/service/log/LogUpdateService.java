@@ -34,9 +34,6 @@ public class LogUpdateService implements LogService {
 
                 System.out.println("수정할 수량 입력 : ");
                 int count = sc.nextInt();
-                System.out.println("수정할 카테고리 입력 : ");
-                String pd_category = sc.next();
-
 
                 logDTO.setCount(count);
 
@@ -51,7 +48,7 @@ public class LogUpdateService implements LogService {
         } // enhanced for
 
         if(sw == 0) {
-            System.out.println("아이디가 존재하지 않습니다.");
+            System.out.println("존재하지 않습니다.");
         } // if
     }
 }
