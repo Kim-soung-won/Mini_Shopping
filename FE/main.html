@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fashion E-commerce Prototype</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: 'Open Sans', sans-serif;
+      }
+      .category-button {
+        background-color: #f3e8ff;
+        color: #5c2a9d;
+      }
+      .sale-banner {
+        background-image: url('https://source.unsplash.com/featured/?fashion,sale');
+        background-size: cover;
+        background-position: center;
+      }
+      .product-image {
+        background-color: #e2e8f0;
+      }
+      .navigation-dot {
+        height: 8px;
+        width: 8px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        margin: 0 5px;
+      }
+      .navigation-dot.active {
+        background-color: #71717a;
+      }
+      .mypage-dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    .mypage-dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 120px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+    .mypage-dropdown:hover .mypage-dropdown-content {
+      display: block;
+    }
+    .mypage-dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+    .mypage-dropdown-content a:hover {
+      background-color: #f1f1f1;
+    }
+    </style>
+  </head>
+  <body class="bg-white text-gray-700">
+    <!-- Header -->
+    <header class="bg-pink-100 py-4">
+      <div class="container mx-auto flex justify-between items-center">
+        <a href="main.html" class="text-pink-600 hover:text-pink-600 font-bold" id="main-link">IDLE</a>
+        <nav class="flex space-x-4">
+          <a href="best.html" class="text-pink-600 hover:text-pink-800" id="best-link">BEST</a>
+          <a href="new.html" class="text-pink-600 hover:text-pink-800" id="new-link">NEW</a>
+          <a href="sale.html" class="text-pink-600 hover:text-pink-800" id="sale-link">SALE</a>
+          <a href="special.html" class="text-pink-600 hover:text-pink-800" id="special-link">SPECIAL</a>
+          <a href="event.html" class="text-pink-600 hover:text-pink-800" id="event-link">EVENT</a>
+          <a href="join.html" class="text-blue-600 hover:text-blue-800" id="memebr-link">JOIN</a>
+          <div class="mypage-dropdown">
+            <a href="#" class="text-blue-600 hover:text-blue-800">MYPAGE</a>
+            <div class="mypage-dropdown-content">
+              <a href="login.html">Login</a>
+              <a href="cart.html">Cart</a>
+              <a href="order.html">Order</a>
+            </div>
+
+          <!-- More navigation items -->
+        </nav>
+        <div class="flex items-center space-x-2">
+          <!-- Icons and user profile -->
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto mt-8">
+      <!-- Carousel -->
+      <div class="relative">
+        <div
+          class="
+            sale-banner
+            rounded-lg
+            shadow-lg
+            p-20
+            text-white
+            font-bold
+            text-4xl
+          "
+        >
+          SEASON SPECIAL
+          <div class="text-sm mt-2">04.01 (MON) - 04.08 (MON)</div>
+          <button class="mt-4 px-6 py-2 bg-pink-600 text-white rounded-full">
+            ON SALE
+          </button>
+        </div>
+        <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2">
+          <span class="navigation-dot active"></span>
+          <span class="navigation-dot"></span>
+          <span class="navigation-dot"></span>
+        </div>
+      </div>
+
+      <!-- Categories -->
+      <div class="flex mt-8 space-x-4">
+        <label><a href="best.html" class="text-pink-600 hover:text-pink-800" id="best-link">BEST LOOK</a>
+        </label>
+      </div>
+
+      <!-- Featured Products -->
+      <main class="my-2">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div class="flex flex-wrap -m-4">
+                <!-- Dynamically generate product cards -->
+                <!-- Placeholder for product cards -->
+                <script>
+                    const products = Array.from({ length: 40 }, (_, i) => ({
+                        id: i,
+                        name: `Product ${i + 1}`,
+                        image: `https://source.unsplash.com/random/300x300/?cloth&sig=${Math.floor(Math.random() * 1000)}`,
+                        price: (Math.random() * 100).toFixed(2)
+                    }));
+
+                    document.write(products.map(product => `
+                        <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+                            <div class="border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+                                <img class="lg:h-48 md:h-36 w-full object-cover object-center" src="${product.image}" alt="product">
+                            </div>
+                        </div>
+                    `).join(''));
+                </script>
+            </div>
+        </div>
+    </main>
+        
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="bg-pink-100 py-4 mt-8">
+      <div class="container mx-auto text-center text-pink-600">
+        &copy; 2024 IDLE Fashion Store
+      </div>
+    </footer>
+
+
+    <script>
+      document.getElementById('best-link').addEventListener('dblclick', function(event) {
+        event.preventDefault();
+        window.open(event.target.href, '_self');
+      });
+    </script>
+  </body>
+</html>
