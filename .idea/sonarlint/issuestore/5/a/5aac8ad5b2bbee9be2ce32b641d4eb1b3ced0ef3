@@ -1,28 +1,32 @@
 
 g
-java:S11920"JDefine a constant instead of duplicating this literal "2. ì¶œë ¥" 5 times.(›–ò8¾Şñ€å1
+java:S11924"JDefine a constant instead of duplicating this literal "2. ì¶œë ¥" 7 times.(›–ò8®Û¦«å1
 g
-java:S1192/"JDefine a constant instead of duplicating this literal "1. ì…ë ¥" 5 times.(³Àº¢8¿Şñ€å1
+java:S11923"JDefine a constant instead of duplicating this literal "1. ì…ë ¥" 7 times.(³Àº¢8®Û¦«å1
 g
-java:S1192L"JDefine a constant instead of duplicating this literal "5. ì¢…ë£Œ" 4 times.(èŠà—8ÀŞñ€å1
+java:S1192P"JDefine a constant instead of duplicating this literal "5. ì¢…ë£Œ" 6 times.(èŠà—8®Û¦«å1
 l
-java:S11921"JDefine a constant instead of duplicating this literal "3. ìˆ˜ì •" 5 times.(—ŞÜøşÿÿÿÿ8ÀŞñ€å1
+java:S11925"JDefine a constant instead of duplicating this literal "3. ìˆ˜ì •" 7 times.(—ŞÜøşÿÿÿÿ8¯Û¦«å1
 n
-java:S1192("QDefine a constant instead of duplicating this literal "ë²ˆí˜¸ ì…ë ¥ : " 6 times.(áØÅƒ8ÀŞñ€å1
+java:S1192,"QDefine a constant instead of duplicating this literal "ë²ˆí˜¸ ì…ë ¥ : " 8 times.(áØÅƒ8¯Û¦«å1
 g
-java:S11922"JDefine a constant instead of duplicating this literal "4. ì‚­ì œ" 5 times.(Ü°â´8ÁŞñ€å1
-z	java:S135 "YReduce the total number of break and continue statements in this loop to use at most one.(˜ïˆÿÿÿÿÿ8ÂŞñ€å1
-l
-java:S2259]"JA "NullPointerException" could be thrown; "brandService" is nullable here.(Ê‡Ê¡şÿÿÿÿ8ïáñ€å1
-n
-java:S2259"KA "NullPointerException" could be thrown; "detailService" is nullable here.(Ü„ŞŒúÿÿÿÿ8ïáñ€å1
+java:S11926"JDefine a constant instead of duplicating this literal "4. ì‚­ì œ" 7 times.(Ü°â´8¯Û¦«å1
+z	java:S135""YReduce the total number of break and continue statements in this loop to use at most one.(˜ïˆÿÿÿÿÿ8¯Û¦«å1
 i
-java:S2259v"LA "NullPointerException" could be thrown; "productService" is nullable here.(Õ¦é‘8ïáñ€å1
+java:S2259z"LA "NullPointerException" could be thrown; "productService" is nullable here.(Õ¦é‘8Ôİ¦«å1
+l
+java:S2259İ"IA "NullPointerException" could be thrown; "loveService" is nullable here.(¸Ğòşÿÿÿÿ8Ôİ¦«å1
+n
+java:S2259”"KA "NullPointerException" could be thrown; "detailService" is nullable here.(Ü„ŞŒúÿÿÿÿ8Ôİ¦«å1
 k
-java:S2259©"HA "NullPointerException" could be thrown; "logService" is nullable here.(‚Ò€ˆüÿÿÿÿ8ïáñ€å1
+java:S2259­"HA "NullPointerException" could be thrown; "logService" is nullable here.(‚Ò€ˆüÿÿÿÿ8Ôİ¦«å1
+o
+java:S2259Å"LA "NullPointerException" could be thrown; "paymentService" is nullable here.(×Í™²úÿÿÿÿ8Ôİ¦«å1
+l
+java:S2259a"JA "NullPointerException" could be thrown; "brandService" is nullable here.(Ê‡Ê¡şÿÿÿÿ8Ôİ¦«å1
 t
-java:S3776"RRefactor this method to reduce its Cognitive Complexity from 55 to the 15 allowed.(¤—¯øÿÿÿÿ8ôáñ€å1
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 75 to the 15 allowed.(¤—¯øÿÿÿÿ8Øİ¦«å1
 9
-java:S3626­"Remove this redundant jump.(ÉŠ©ƒ8õáñ€å1
-è
-java:S6541"ÅA "Brain Method" was detected. Refactor it to reduce at least one of the following metrics: LOC from 130 to 64, Complexity from 33 to 14, Nesting Level from 3 to 2, Number of Variables from 8 to 6.(¤—¯øÿÿÿÿ8„âñ€å1
+java:S3626à"Remove this redundant jump.(ÉŠ©ƒ8Ùİ¦«å1
+é
+java:S6541"ÆA "Brain Method" was detected. Refactor it to reduce at least one of the following metrics: LOC from 174 to 64, Complexity from 45 to 14, Nesting Level from 3 to 2, Number of Variables from 10 to 6.(¤—¯øÿÿÿÿ8çİ¦«å1
