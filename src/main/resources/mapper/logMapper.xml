@@ -27,4 +27,8 @@
     <delete id="deleteLog" parameterType="log">
         delete FROM product_log WHERE product_id=#{productId}
     </delete>
+
+    <select id="checkCount" parameterType="int" resultType="log">
+        select * from product_log where count=#{count}
+    </select>
 </mapper>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="paymentSQL">
+
+    <insert id="writePayment" parameterType="payment">
+        insert into payment values(#{paymentId}
+        , #{createdWho}
+        , #{productId}
+        , #{totalPrice}
+        , #{size}
+        , #{count}
+        , now())
+    </insert>
+
+    <select id="getPaymentList" resultType="payment">
+        select * from payment
+    </select>
+
+    <update id="updatePayment" parameterType="payment">
+        update payment set payment_id=#{paymentId}
+        , total_price=#{totalPrice}
+        where product_id=#{productId}
+    </update>
+
+    <delete id="deletePayment" parameterType="payment">
+        delete FROM payment WHERE product_id=#{productId}
+    </delete>
+</mapper>

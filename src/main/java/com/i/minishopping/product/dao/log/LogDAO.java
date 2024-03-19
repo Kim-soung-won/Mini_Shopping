@@ -13,5 +13,6 @@ public interface LogDAO {
 
     void deleteLog(LogDTO logDTO);
 
+    LogDTO checkCount(int count);
 
 }
