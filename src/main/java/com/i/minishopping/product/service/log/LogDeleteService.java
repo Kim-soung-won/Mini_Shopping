@@ -1,6 +1,5 @@
 package com.i.minishopping.product.service.log;
 
-import com.i.minishopping.product.bean.detail.DetailDTO;
 import com.i.minishopping.product.bean.log.LogDTO;
 import com.i.minishopping.product.dao.log.LogDAO;
 import lombok.RequiredArgsConstructor;
@@ -40,7 +39,7 @@ public class LogDeleteService implements LogService {
         } // enhanced for
 
         if(sw == 0) {
-            System.out.println("아이디가 존재하지 않습니다.");
+            System.out.println("존재하지 않습니다.");
         }
     }
 }

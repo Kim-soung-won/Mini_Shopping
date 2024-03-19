@@ -1,6 +1,7 @@
 package com.i.minishopping;
 
 import com.i.minishopping.brand.service.BrandService;
+import com.i.minishopping.payment.service.PaymentService;
 import com.i.minishopping.product.service.detail.DetailService;
 import com.i.minishopping.product.service.log.LogService;
 import com.i.minishopping.product.service.product.ProductService;
@@ -13,9 +14,7 @@ import com.i.minishopping.user.service.UserService;
 import java.util.Scanner;
 
 
-/* 수정 네번함 */
-/*수정 두번함 */
-/*수정함*/
+
 @Configuration
 @ComponentScan(basePackages = "com.i.minishopping")
 public class Main {
@@ -25,6 +24,7 @@ public class Main {
         int num;
         BrandService brandService = null;
         UserService userService = null;
+        PaymentService paymentService = null;
         ProductService productService = null;
         DetailService detailService = null;
         LogService logService = null;
@@ -36,11 +36,12 @@ public class Main {
             System.out.println("3. product");
             System.out.println("4. detail");
             System.out.println("5. log");
-            System.out.println("6. 종료");
+            System.out.println("6. payment");
+            System.out.println("7. 종료");
             System.out.print("번호 입력 : ");
             num = scan.nextInt();
 
-            if(num == 6) break;
+            if(num == 7) break;
 
             if(num == 1) {
                 System.out.println();
@@ -168,8 +169,32 @@ public class Main {
 
                 logService.execute();
 
+            } else if(num == 6) {
+                System.out.println();
+                System.out.println("1. 입력");
+                System.out.println("2. 출력");
+                System.out.println("3. 수정");
+                System.out.println("4. 삭제");
+                System.out.println("5. 종료");
+                System.out.print("번호 입력 : ");
+                num = scan.nextInt();
+
+                if(num==1) {
+                    paymentService = applicationContext.getBean("paymentInsertService", PaymentService.class);
+                }else if(num==2) {
+                    paymentService = applicationContext.getBean("paymentSelectService", PaymentService.class);
+                }else if(num==3) {
+                    paymentService = applicationContext.getBean("paymentUpdateService", PaymentService.class);
+                }else if(num==4) {
+                    paymentService = applicationContext.getBean("paymentDeleteService", PaymentService.class);
+                } // if-else if
+
+            if(num==5) break;
+
+            paymentService.execute();
+
             } else {
-                System.out.println("1~6번 선택");
+                System.out.println("1~7번 선택");
                 continue;
             }
 

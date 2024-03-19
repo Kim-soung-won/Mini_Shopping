@@ -33,4 +33,9 @@ public class LogDAOMybatis implements LogDAO {
     public void deleteLog(LogDTO logDTO) {
         sqlSession.delete("logSQL.deleteLog", logDTO);
     }
+
+    @Override
+    public LogDTO checkCount(int count) {
+        return sqlSession.selectOne("logSQL.checkCount", count);
+    }
 }

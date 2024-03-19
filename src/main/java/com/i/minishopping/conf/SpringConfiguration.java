@@ -50,6 +50,7 @@ public class SpringConfiguration {
         sqlSessionFactoryBean.setDataSource(dataSource());
         sqlSessionFactoryBean.setConfigLocation(new ClassPathResource("mybatis-config.xml"));
         sqlSessionFactoryBean.setMapperLocations(new ClassPathResource("mapper/userMapper.xml"),
+                                                 new ClassPathResource("mapper/paymentMapper.xml"),
                                                  new ClassPathResource("mapper/productMapper.xml"),
                                                  new ClassPathResource("mapper/detailMapper.xml"),
                                                  new ClassPathResource("mapper/logMapper.xml"),
