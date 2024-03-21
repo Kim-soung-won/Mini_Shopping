@@ -15,6 +15,7 @@
         <typeAlias type="com.i.minishopping.product.bean.detail.DetailDTO" alias="detail"/>
         <typeAlias type="com.i.minishopping.product.bean.log.LogDTO" alias="log"/>
         <typeAlias type="com.i.minishopping.brand.bean.BrandDTO" alias="brand"/>
+        <typeAlias type="com.i.minishopping.love.bean.LoveDTO" alias="love"/>
     </typeAliases>
 
 </configuration>

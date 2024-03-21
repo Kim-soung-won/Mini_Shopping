@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="loveSQL">
+    <insert id="insertLove">
+        INSERT INTO love (product_id, created_who, created_at)
+        VALUES (#{productId}, #{userId}, NOW())
+    </insert>
+
+    <delete id="deleteLove">
+        DELETE FROM love WHERE product_id = #{productId} AND created_who = #{userId}
+    </delete>
+
+    <select id="selectLovesByUserId" resultType="com.i.minishopping.love.bean.LoveDTO">
+        SELECT * FROM love WHERE created_who = #{userId}
+    </select>
+
+    <select id="existsLove" resultType="int">
+        SELECT EXISTS(
+        SELECT 1 FROM love WHERE product_id = #{productId} AND created_who = #{userId}
+        )
+    </select>
+
+</mapper>

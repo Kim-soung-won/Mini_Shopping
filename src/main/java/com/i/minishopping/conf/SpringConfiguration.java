@@ -54,7 +54,8 @@ public class SpringConfiguration {
                                                  new ClassPathResource("mapper/productMapper.xml"),
                                                  new ClassPathResource("mapper/detailMapper.xml"),
                                                  new ClassPathResource("mapper/logMapper.xml"),
-                                                 new ClassPathResource("mapper/brandMapper.xml"));
+                                                 new ClassPathResource("mapper/brandMapper.xml"),
+                                                 new ClassPathResource("mapper/loveMapper.xml"));
 
         return sqlSessionFactoryBean.getObject();
     } // sqlSessionFactory

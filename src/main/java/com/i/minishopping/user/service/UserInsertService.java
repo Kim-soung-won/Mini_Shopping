@@ -29,7 +29,7 @@ public class UserInsertService implements UserService {
         String userEmail = scan.nextLine();
         System.out.print("비밀번호 입력 : ");
         String userPassword = scan.nextLine();
-        UserRole userRole = UserRole.ROLE_USER;
+        UserRole userRole = UserRole.USER;
         System.out.print("전화번호 입력 : ");
         String userPnum = scan.nextLine();
         // UserDTO 객체에 정보 설정
