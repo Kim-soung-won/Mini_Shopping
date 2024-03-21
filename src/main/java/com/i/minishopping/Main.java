@@ -1,6 +1,7 @@
 package com.i.minishopping;
 
 import com.i.minishopping.brand.service.BrandService;
+import com.i.minishopping.love.service.LoveService;
 import com.i.minishopping.payment.service.PaymentService;
 import com.i.minishopping.product.service.detail.DetailService;
 import com.i.minishopping.product.service.log.LogService;
@@ -28,6 +29,7 @@ public class Main {
         ProductService productService = null;
         DetailService detailService = null;
         LogService logService = null;
+        LoveService loveService = null;
 
         while(true){
             System.out.println();
@@ -37,11 +39,12 @@ public class Main {
             System.out.println("4. detail");
             System.out.println("5. log");
             System.out.println("6. payment");
-            System.out.println("7. 종료");
+            System.out.println("7. love");
+            System.out.println("8. 종료");
             System.out.print("번호 입력 : ");
             num = scan.nextInt();
 
-            if(num == 7) break;
+            if(num == 8) break;
 
             if(num == 1) {
                 System.out.println();
@@ -192,8 +195,36 @@ public class Main {
             if(num==5) break;
 
             paymentService.execute();
-            } else {
-                System.out.println("1~7번 선택");
+
+
+            } else if(num == 7) {
+                System.out.println();
+                System.out.println("1. 입력");
+                System.out.println("2. 출력");
+                System.out.println("3. 수정");
+                System.out.println("4. 삭제");
+                System.out.println("5. 종료");
+                System.out.print("번호 입력 : ");
+                num = scan.nextInt();
+
+                if (num == 1) {
+                    loveService = applicationContext.getBean("loveInsertService", LoveService.class);
+                } else if (num == 2) {
+                    loveService = applicationContext.getBean("loveSelectService", LoveService.class);
+                } else if (num == 3) {
+                    loveService = applicationContext.getBean("loveUpdateService", LoveService.class);
+                } else if (num == 4) {
+                    loveService = applicationContext.getBean("loveDeleteService", LoveService.class);
+                } // if-else if
+
+                if (num == 5) break;
+
+                loveService.execute();
+            }else {
+                System.out.println("1~8번 선택");
+
+
+
                 continue;
             }
         } // while
