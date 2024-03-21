@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="shopping_mall@db-lpeqn-kr.vpc-pub-cdb.ntruss.com">
   <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.51">
-    <root id="1"/>
+    <root id="1">
+      <DefaultEngine>InnoDB</DefaultEngine>
+      <DefaultTmpEngine>InnoDB</DefaultTmpEngine>
+      <ServerVersion>8.0.34</ServerVersion>
+    </root>
     <collation id="2" parent="1" name="armscii8_bin">
       <Charset>armscii8</Charset>
     </collation>
@@ -915,7 +919,7 @@
     </schema>
     <schema id="292" parent="1" name="shopping_mall">
       <Current>1</Current>
-      <LastIntrospectionLocalTimestamp>2024-03-15.01:48:05</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2024-03-19.08:02:15</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <user id="293" parent="1" name="mysql.infoschema">
@@ -984,7 +988,7 @@
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
     <column id="310" parent="300" name="brand_id">
-      <AutoIncrement>1</AutoIncrement>
+      <AutoIncrement>45</AutoIncrement>
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1202,7 +1206,7 @@ created_at</ColNames>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="353" parent="304" name="payment_id">
-      <AutoIncrement>1</AutoIncrement>
+      <AutoIncrement>124</AutoIncrement>
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1266,7 +1270,7 @@ created_at</ColNames>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="366" parent="305" name="product_id">
-      <AutoIncrement>1</AutoIncrement>
+      <AutoIncrement>2</AutoIncrement>
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1427,7 +1431,7 @@ created_who</ColNames>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="397" parent="308" name="user_id">
-      <AutoIncrement>2</AutoIncrement>
+      <AutoIncrement>9091</AutoIncrement>
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
