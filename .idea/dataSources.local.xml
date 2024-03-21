@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal" created-in="IU-233.13135.103">
+<<<<<<< HEAD
+=======
+
+>>>>>>> 807e68185cdca5bbc5b4d44c143f80d919921b33
     <data-source name="shopping_mall@db-lpeqn-kr.vpc-pub-cdb.ntruss.com" uuid="60e55699-8687-4cf1-b74b-70afb397ee65">
       <database-info product="MySQL" version="8.0.34" jdbc-version="4.2" driver-name="MySQL Connector/J" driver-version="mysql-connector-java-8.0.25 (Revision: 08be9e9b4cba6aa115f9b27b215887af40b159e0)" dbms="MYSQL" exact-version="8.0.34" exact-driver-version="8.0">
         <extra-name-characters>#@</extra-name-characters>
