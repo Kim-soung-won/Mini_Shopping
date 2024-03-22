@@ -1,0 +1,10 @@
+.mySlides {
+    display: none;
+  }
+img {
+    max-width: 25cm;
+    max-height: 25cm;
+    margin: auto;
+    display: block;
+    vertical-align: bottom;
+  }
