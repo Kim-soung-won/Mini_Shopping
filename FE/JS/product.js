@@ -35,7 +35,3 @@ document.write(products.map(product => `
         </div>
     </div>
 `).join(''));
-
-function redirectToProductInfo(productId) {
-    window.location.href = `product_info.html?id=${productId}`;
-}
