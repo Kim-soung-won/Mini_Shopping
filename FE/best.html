@@ -11,6 +11,32 @@
     />
     <link rel="stylesheet" href="./CSS/form.css">
     <link rel="stylesheet" href="./CSS/Banner.css">
+
+    <style>
+      .pagination-container {
+          display: flex;
+          justify-content: center;
+          margin-top: 20px;
+      }
+
+      .pagination-container a {
+          display: inline-block;
+          padding: 5px 10px;
+          margin: 0 5px;
+          border-radius: 5px;
+          font-weight: bold;
+          text-decoration: none;
+          color: #000;
+      }
+
+      .pagination-container a:hover {
+          background-color: #ddd;
+      }
+
+      .pagination-container a.active {
+          background-color: pink;
+          color: #fff;
+      }
     </style>
 </head>
 <body>
@@ -47,6 +73,8 @@
                 <script src="./JS/product.js"></script> 
             </div>
         </div>
+        <div class="pagination-container">
+        </div>
     </main>
     <footer class="bg-black py-4 mt-8">
         <div class="container mx-auto text-center text-pink-500">
@@ -59,5 +87,34 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        function generatePagination(totalPages) {
+            const paginationContainer = document.querySelector('.pagination-container');
+            for (let i = 1; i <= totalPages; i++) {
+                const pageLink = document.createElement('a');
+                pageLink.href = '#';
+                pageLink.textContent = i;
+                pageLink.addEventListener('click', () => handlePageClick(i));
+                paginationContainer.appendChild(pageLink);
+            }
+        }
+
+        function handlePageClick(pageNumber) {
+            const paginationLinks = document.querySelectorAll('.pagination-container a');
+            paginationLinks.forEach(link => link.classList.remove('active'));
+            paginationLinks[pageNumber - 1].classList.add('active');
+            console.log('Clicked page:', pageNumber);
+        }
+
+        // 전체 제품 수와 한 페이지당 보여줄 제품 수를 이용하여 전체 페이지 수를 계산합니다.
+        const totalProducts = 160; // 예를 들어 160개의 제품이 있다고 가정합니다.
+        const productsPerPage = 40; // 한 페이지당 40개의 제품을 표시합니다.
+        const totalPages = Math.ceil(totalProducts / productsPerPage);
+
+        generatePagination(totalPages);
+        
+    </script>
+
 </body>
 </html>
