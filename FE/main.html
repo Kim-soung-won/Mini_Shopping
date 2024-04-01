@@ -10,39 +10,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./CSS/main.css">
-    
-    <style>
-      /* 팝업 스타일 */
-      .popup-container {
-          display: none;
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background-color: rgba(0, 0, 0, 0.5); /* 배경에 어둡게 처리 */
-          z-index: 9999; /* 다른 요소들보다 위에 표시 */
-      }
-
-      .popup-content {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          background-color: gray;
-          padding: 20px;
-          border-radius: 10px;
-          text-align: center;
-      }
-      .popup-content img {
-            display: block; /* 이미지를 블록 요소로 설정하여 중앙 정렬을 쉽게합니다. */
-            margin: 0 auto; /* 수평으로 가운데 정렬합니다. */
-            max-width: 100%; /* 이미지가 너무 큰 경우 화면에 맞춰서 크기를 조정합니다. */
-            max-height: 80vh; /* 이미지가 화면보다 큰 경우 화면에 맞춰서 크기를 조정합니다. */
-        }
-
-    </style>
-
+    <link rel="stylesheet" href="./CSS/popup.css">
   </head>
   <body class="bg-white text-gray-700">
     <!-- Header -->
@@ -54,6 +22,7 @@
           <a href="new.html" class="text-pink-500 hover:text-pink-800" id="new-link">NEW</a>
           <a href="sale.html" class="text-pink-500 hover:text-pink-800" id="sale-link">SALE</a>
           <a href="event.html" class="text-pink-500 hover:text-pink-800" id="event-link">EVENT</a>
+          <a href="cs.html" class="text-pink-500 hover:text-pink-800" id="cs-link">고객센터</a>
           <a href="join.html" class="text-blue-500 hover:text-blue-800" id="memebr-link">JOIN</a>
           <div class="mypage-dropdown">
             <a href="#" class="text-blue-500 hover:text-blue-800">MYPAGE</a>
@@ -148,21 +117,29 @@
       });
     </script>
 
-    <script>
-    window.onload = function() {
-        // 팝업 요소 가져오기
-        var popupContainer = document.getElementById('popup-container');
-        var closeButton = document.getElementById('close-popup');
+<script>
+  window.onload = function() {
+      // 팝업 요소 가져오기
+      var popupContainer = document.getElementById('popup-container');
+      var closeButton = document.getElementById('close-popup');
 
-        // 팝업 띄우기
-        popupContainer.style.display = 'block';
+      // 팝업 띄우기
+      popupContainer.style.display = 'block';
 
-        // 닫기 버튼 클릭 시 팝업 닫기
-        closeButton.onclick = function() {
-            popupContainer.style.display = 'none';
-        };
-    };
-    </script>
+      // 닫기 버튼 클릭 시 팝업 닫기
+      closeButton.onclick = function() {
+          popupContainer.style.display = 'none';
+      };
+
+      // 팝업 이외의 영역 클릭 시 팝업 닫기
+      document.body.addEventListener('click', function(event) {
+          if (event.target === popupContainer) {
+              popupContainer.style.display = 'none';
+          }
+      });
+  };
+</script>
+
 
     <footer class="bg-black py-4 mt-5">
       <div class="container mx-auto text-center text-pink-500">
@@ -171,6 +148,7 @@
                   <p class="text-sm text-pink-500 font-bold">
                       © 2024 IDLE Fashion Store
                   </p>
+                  
               </div>
           </div>
       </div>

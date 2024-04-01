@@ -108,6 +108,10 @@
         const totalPages = Math.ceil(totalProducts / productsPerPage);
 
         generatePagination(totalPages);
+
+        function goToProductInfo(productId) {
+        window.location.href = `product_info.html?id=${productId}`;
+    }
         
     </script>
 

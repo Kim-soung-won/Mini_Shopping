@@ -39,7 +39,6 @@
       }
     </style>
 </head>
-<body>
     <body class="bg-white text-gray-700">
         <!-- Header -->
         <header class="bg-black py-7">
@@ -113,6 +112,10 @@
         const totalPages = Math.ceil(totalProducts / productsPerPage);
 
         generatePagination(totalPages);
+        
+        function goToProductInfo(productId) {
+        window.location.href = `product_info.html?id=${productId}`;
+    }
         
     </script>
 
