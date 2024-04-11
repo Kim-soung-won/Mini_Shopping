@@ -10,5 +10,5 @@ function showSlides() {
   slideIndex++;
   if (slideIndex > slides.length) {slideIndex = 1}    
   slides[slideIndex-1].style.display = "block";  
-  setTimeout(showSlides, 3000); // 이미지가 3초마다 넘어감
+  setTimeout(showSlides, 2000); // 이미지가 2초마다 넘어감
 }

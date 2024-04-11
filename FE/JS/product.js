@@ -1,13 +1,12 @@
-// script.js
 const products = Array.from({ length: 40 }, (_, i) => ({
-    id: i,
+    id: i + 1, // 각 제품에 고유한 ID를 부여합니다.
     name: `Product ${i + 1}`,
     image: `https://source.unsplash.com/random/300x300/?model&sig=${Math.floor(Math.random() * 1000)}`,
     price: (Math.random() * 100).toFixed(2)
 }));
 
-document.write(products.map(product => `
-    <div class="p-4 md:w-1/4 sm:w-1/2 w-full" ondblclick="redirectToProductInfo(${product.id})" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+document.querySelector('.flex.flex-wrap.-m-1').innerHTML = products.map(product => `
+    <div class="p-4 md:w-1/4 sm:w-1/2 w-full" onclick="redirectToProductInfo(${product.id})" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
         <div class="border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
             <img class="lg:h-48 md:h-36 w-full object-cover object-center" src="${product.image}" alt="product">
             <div class="p-6">
@@ -34,4 +33,8 @@ document.write(products.map(product => `
             </div>
         </div>
     </div>
-`).join(''));
+`).join('');
+
+function redirectToProductInfo(productId) {
+    window.location.href = `product_info.html?id=${productId}`; // 제품 ID를 파라미터로 전달하여 제품 정보 페이지로 이동합니다.
+}

@@ -6,29 +6,35 @@ body {
 }
 
 .container {
-    width: 13cm;
-    margin: 50px auto;
+    width: 50%; /* Set the container width to 50% */
+    max-width: 13cm; /* Limit the maximum width to 13cm */
+    margin: 50px auto; /* Center the container horizontally */
     padding: 20px;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+
 h2 {
-    text-align: center; 
+    text-align: center;
+    color: purple
 }
 
 form {
     margin-top: 20px;
     display: flex;
     flex-direction: column;
+    align-items: center; /* Center align the form contents */
 }
+
 
 input[type="text"],
 input[type="password"],
 input[type="email"],
 select {
-    width: 80%;
+    width: 50%; /* Make the input fields occupy half of the container width */
+    max-width: 300px; /* Limit the maximum width of the input fields */
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
@@ -37,8 +43,9 @@ select {
 }
 
 input[type="submit"] {
+    width: 50%
     background-color: pink;
-    color: #fff;
+    color: pink;
     border: none;
     padding: 15px 20px;
     border-radius: 4px;
